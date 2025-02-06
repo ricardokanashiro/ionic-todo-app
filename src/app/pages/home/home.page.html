@@ -1,0 +1,38 @@
+<ion-app class="home">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="home__title">TodoList</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <div class="home__create-task-area">
+
+      <div class="home__input-wrapper">
+
+        <ion-label position="floating" class="sr-only">Titulo</ion-label>
+
+        <ion-input 
+          type="text" 
+          placeholder="Digite o tarefa" 
+          [(ngModel)]="todoTitleText"
+          (keyup.enter)="handleCreateTodo()"
+        ></ion-input>
+        
+      </div>
+
+      <ion-button (click)="handleCreateTodo()">Criar</ion-button>
+
+    </div>
+    
+    <div class="home__delete-all-btn-wrapper">
+      <ion-button fill="clear" class="home__delete-all-btn ion-no-padding" (click)="handleDeleteAllTodos()">Deletar Todos</ion-button>
+    </div>
+
+    <app-todo-list></app-todo-list>
+
+  </ion-content>
+
+</ion-app>

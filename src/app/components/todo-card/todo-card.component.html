@@ -1,0 +1,13 @@
+<ion-item>
+
+  <div (click)="handleCheckTodo(todo?.id)">
+    <ion-checkbox [checked]="todo?.done" [disabled]="true"></ion-checkbox>
+  </div>
+
+  <ion-text>{{todo?.title}}</ion-text>
+
+  <ion-button (click)="handleDeleteTodo(todo?.id)">
+    <ion-icon name="trash"></ion-icon>
+  </ion-button>
+
+</ion-item>
